@@ -1,0 +1,89 @@
+﻿<Window x:Class="CastleLegacy.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CastleLegacy.View"
+        xmlns:p="clr-namespace:CastleLegacy.Properties"
+        mc:Ignorable="d"
+        Title="Login" Height="768" Width="1366" MinHeight="668" MinWidth="1166"
+        WindowStartupLocation="CenterScreen"
+        Background="#181818">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <!--Title part-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Castle" Style="{StaticResource titleText}" Margin="50 50 0 0"/>
+                    <TextBlock Text="Legacy" Style="{StaticResource titleText}" Foreground="{StaticResource SandColor}" Margin="85 -10 0 0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="30">
+                    <TextBlock Name="LanguageTxt" Text="EN" Style="{StaticResource normalText}" FontFamily="../Fonts/Comfortaa-Bold.ttf#comfortaa"/>
+                    <Image Name="DropMenu" Source="/Images/DownArrowIcon.png" Margin="10 2.5 0 10" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="ShowPopup" MouseEnter="PlayHoverSound"/>
+                    
+                    <Popup Name="popup" PlacementTarget="{Binding ElementName=DropMenu}" Width="150" Placement="Bottom" StaysOpen="True" IsOpen="False">
+                        <Border Background="#181818" MouseLeave="HidePopup">
+                            <Border BorderBrush="White" BorderThickness="1" CornerRadius="10" Padding="20">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Button Content="{x:Static p:Resources.Spanish}" Style="{StaticResource underlineButton}" Margin="0 0 0 5" Click="ChangeLanguage" MouseEnter="PlayHoverSound"/>
+                                    <Button Content="{x:Static p:Resources.English}" Style="{StaticResource underlineButton}" Margin="0 0 0 5" Click="ChangeLanguage" MouseEnter="PlayHoverSound"/>
+                                </StackPanel>
+                            </Border>
+                        </Border>
+                    </Popup>
+                </StackPanel>
+            </Grid>
+            
+            <!--Login part-->
+            <StackPanel Margin="50,0,0,0"  Grid.Row="1" VerticalAlignment="Center">
+                <TextBlock Text="{x:Static p:Resources.Username}" Style="{StaticResource normalText}"/>
+                <TextBox Style="{StaticResource underlineTextBox}" Height="45" Width="409" HorizontalAlignment="Left" Margin="0 10 0 0" />
+                <TextBlock Text="{x:Static p:Resources.Password}" Style="{StaticResource normalText}" Margin="0 30 0 0"/>
+                <PasswordBox Style="{StaticResource underlinePassword}" Height="45" Width="409" HorizontalAlignment="Left" Margin="0 10 0 0"/>
+                <Button Content="{x:Static p:Resources.LogIn}" Height="45" Width="200" HorizontalAlignment="Left" Margin="0 75 0 0" Style="{StaticResource button}" Click="OpenMenuView" MouseEnter="PlayHoverSound"/>
+            </StackPanel>
+
+            <!--Under Buttons-->
+            <Grid Grid.Row="2">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="{x:Static p:Resources.ForgotPassword}" Style="{StaticResource underlineText}"  Margin="20" MouseEnter="PlayHoverSound"/>
+                <TextBlock Text="{x:Static p:Resources.NotRegisterYet}" Foreground="white" Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource underlineText}" Margin="20" MouseEnter="PlayHoverSound"/>
+
+            </Grid>
+
+
+        </Grid>
+
+        <Viewbox HorizontalAlignment="Right" Grid.Column="1">
+            <Image Source="/Images/Castle1.png"/>
+        </Viewbox>
+
+    </Grid>
+</Window>
