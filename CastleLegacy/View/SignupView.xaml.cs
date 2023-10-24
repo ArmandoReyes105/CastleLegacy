@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CastleLegacy.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace CastleLegacy.View
     /// </summary>
     public partial class SignupView : Window
     {
+
         public SignupView()
         {
             InitializeComponent();
@@ -27,11 +29,16 @@ namespace CastleLegacy.View
 
         private void OpenLoginView(object sender, MouseButtonEventArgs e)
         {
-            //PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             LoginView loginView = new LoginView();  
             this.Close();
             loginView.Show();
+        }
+
+        public void PlayHoverSound(object sender, MouseEventArgs e)
+        {
+            SoundManager.PlayHoverSound();
         }
     }
 }

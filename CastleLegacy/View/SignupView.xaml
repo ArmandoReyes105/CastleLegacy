@@ -44,8 +44,8 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="{x:Static p:Resources.CreateAccount}" Style="{StaticResource button}" Height="45" Width="200"/>
-            <TextBlock Text="{x:Static p:Resources.AlreadyHaveAccount}" Grid.Column="2" Style="{StaticResource underlineText}" VerticalAlignment="Center" MouseLeftButtonDown="OpenLoginView"/>
+            <Button Content="{x:Static p:Resources.CreateAccount}" Style="{StaticResource button}" Height="45" Width="200" MouseEnter="PlayHoverSound"/>
+            <TextBlock Text="{x:Static p:Resources.AlreadyHaveAccount}" Grid.Column="2" Style="{StaticResource underlineText}" VerticalAlignment="Center" MouseLeftButtonDown="OpenLoginView" MouseEnter="PlayHoverSound"/>
         </Grid>
 
         <Viewbox HorizontalAlignment="Left">

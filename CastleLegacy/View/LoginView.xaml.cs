@@ -6,12 +6,14 @@ using System.Windows.Input;
 using System.Media;
 using System.IO;
 using System.Windows.Navigation;
+using CastleLegacy.Helpers;
 
 namespace CastleLegacy.View
 {
     
     public partial class LoginView : Window
     {
+
         public LoginView()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace CastleLegacy.View
         private void OpenMenuView(object sender, RoutedEventArgs e) 
         {
 
-            PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             MainWindow mainWindow = new MainWindow();
             this.Close();
@@ -47,7 +49,7 @@ namespace CastleLegacy.View
         private void ChangeLanguage(object sender, RoutedEventArgs e)
         {
 
-            PlaySound("../../Audio/ButtonClick.wav"); 
+            SoundManager.PlayClickSound();
 
             Button selectedButton = (Button)sender;
             string buttonContent = selectedButton.Content.ToString();
@@ -67,23 +69,14 @@ namespace CastleLegacy.View
 
         }
 
-        private void PlaySound(string sound) 
-        {
-            SoundPlayer soundPlayer = new SoundPlayer(sound);
-            soundPlayer.Play();
-            soundPlayer.Dispose();
-        }
-
         public void PlayHoverSound(object sender, MouseEventArgs e)
         {
-            SoundPlayer soundPlayer = new SoundPlayer("../../Audio/ButtonHover.wav");
-            soundPlayer.Play();
-            soundPlayer.Dispose();
+            SoundManager.PlayHoverSound();
         }
 
         private void OpenSignupView(object sender, MouseButtonEventArgs e)
         {
-            PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             SignupView signup = new SignupView();   
             this.Close();
