@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using CastleLegacy.Helpers;
+using System.Globalization;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,7 +19,7 @@ namespace CastleLegacy.View
         private void ReturnToMenu(object sender, RoutedEventArgs e) 
         {
 
-            PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             NavigationService navigationService = NavigationService.GetNavigationService(this);
             navigationService.GoBack();
@@ -27,14 +28,7 @@ namespace CastleLegacy.View
 
         private void PlayHoverSound(object sender, MouseEventArgs e) 
         {
-            PlaySound("../../Audio/ButtonHover.wav"); 
-        }
-
-        private void PlaySound(string sound) 
-        {
-            SoundPlayer soundPlayer = new SoundPlayer(sound);
-            soundPlayer.Play();
-            soundPlayer.Dispose();
+            SoundManager.PlayHoverSound();  
         }
 
         private void ChangeLanguageLabel() 

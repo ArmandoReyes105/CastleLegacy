@@ -82,7 +82,7 @@
         </Grid>
 
         <Viewbox HorizontalAlignment="Right" Grid.Column="1">
-            <Image Source="/Images/Castle1.png"/>
+            <Image Source="/Resources/Images/Castle1.png"/>
         </Viewbox>
 
     </Grid>

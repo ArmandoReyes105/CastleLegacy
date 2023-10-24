@@ -13,14 +13,14 @@ namespace CastleLegacy.Helpers
 
         public static void PlayClickSound()
         {
-            SoundPlayer soundPlayer = new SoundPlayer("../../Audio/ButtonClick.wav");
+            SoundPlayer soundPlayer = new SoundPlayer("../../Resources/Audio/ButtonClick.wav");
             soundPlayer.Play();
             soundPlayer.Dispose();
         }
 
         public static void PlayHoverSound()
         {
-            SoundPlayer soundPlayer = new SoundPlayer("../../Audio/ButtonHover.wav");
+            SoundPlayer soundPlayer = new SoundPlayer("../../Resources/Audio/ButtonHover.wav");
             soundPlayer.Play();
             soundPlayer.Dispose();
         }

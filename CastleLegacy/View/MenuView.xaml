@@ -10,7 +10,7 @@
       Title="MenuView">
 
     <Grid>
-        <Image Name="imagen" Source="/Images/BigWhiteParticle.png" VerticalAlignment="Top"/>
+        <Image Name="imagen" Source="/Resources/Images/BigWhiteParticle.png" VerticalAlignment="Top"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -26,13 +26,13 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="40">
-                    <Image Source="/Images/LIcon.png" Height="20" VerticalAlignment="Top">
+                    <Image Source="/Resources/Images/LIcon.png" Height="20" VerticalAlignment="Top">
                         <Image.RenderTransform>
                             <RotateTransform Angle="180" CenterX="0.5" CenterY="7"/>
                         </Image.RenderTransform>
                     </Image>
                     <TextBlock Text="Menu" Style="{StaticResource titleText}"/>
-                    <Image Source="/Images/LIcon.png" Height="20" VerticalAlignment="Bottom" Margin="10 0 0 0"/>
+                    <Image Source="/Resources/Images/LIcon.png" Height="20" VerticalAlignment="Bottom" Margin="10 0 0 0"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1"  VerticalAlignment="Center" Margin="95 0 0 0">
@@ -46,7 +46,7 @@
 
             </Grid>
 
-            <Image Name="imagen2" Source="/Images/Castle2.png" HorizontalAlignment="Right" Grid.Column="1" Margin="0 0 50 0"/>
+            <Image Name="imagen2" Source="/Resources/Images/Castle2.png" HorizontalAlignment="Right" Grid.Column="1" Margin="0 0 50 0"/>
         </Grid>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CastleLegacy.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -44,19 +45,12 @@ namespace CastleLegacy.View
 
         private void PlayHoverSound(object sender, MouseEventArgs e) 
         {
-            PlaySound("../../Audio/ButtonHover.wav");
-        }
-
-        private void PlaySound(string sound) 
-        {
-            SoundPlayer soundPlayer = new SoundPlayer(sound);
-            soundPlayer.Play();
-            soundPlayer.Dispose();
+            SoundManager.PlayHoverSound();
         }
 
         private void QuitGame(object sender, RoutedEventArgs e)
         {
-            PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             LoginView login = new LoginView();
             Window.GetWindow(this).Close();
@@ -66,7 +60,7 @@ namespace CastleLegacy.View
 
         private void OpenConfigurationView(object sender, RoutedEventArgs e)
         {
-            PlaySound("../../Audio/ButtonClick.wav");
+            SoundManager.PlayClickSound();
 
             NavigationService navegationService = NavigationService.GetNavigationService(this);
             navegationService.Navigate(new ConfigurationView());
