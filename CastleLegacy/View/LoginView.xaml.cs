@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Media;
 using System.IO;
+using System.Windows.Navigation;
 
 namespace CastleLegacy.View
 {
@@ -31,7 +32,6 @@ namespace CastleLegacy.View
         {
             CultureInfo currentUICulture = CultureInfo.CurrentUICulture;
             LanguageTxt.Text = currentUICulture.Name.ToUpper(); 
-
         }
 
         private void OpenMenuView(object sender, RoutedEventArgs e) 
@@ -79,6 +79,15 @@ namespace CastleLegacy.View
             SoundPlayer soundPlayer = new SoundPlayer("../../Audio/ButtonHover.wav");
             soundPlayer.Play();
             soundPlayer.Dispose();
+        }
+
+        private void OpenSignupView(object sender, MouseButtonEventArgs e)
+        {
+            PlaySound("../../Audio/ButtonClick.wav");
+
+            SignupView signup = new SignupView();   
+            this.Close();
+            signup.Show();
         }
     }
 }

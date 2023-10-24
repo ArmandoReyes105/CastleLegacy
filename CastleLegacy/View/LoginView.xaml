@@ -74,7 +74,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Text="{x:Static p:Resources.ForgotPassword}" Style="{StaticResource underlineText}"  Margin="20" MouseEnter="PlayHoverSound"/>
-                <TextBlock Text="{x:Static p:Resources.NotRegisterYet}" Foreground="white" Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource underlineText}" Margin="20" MouseEnter="PlayHoverSound"/>
+                <TextBlock Text="{x:Static p:Resources.NotRegisterYet}" Foreground="white" Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource underlineText}" Margin="20" MouseEnter="PlayHoverSound" MouseLeftButtonDown="OpenSignupView"/>
 
             </Grid>
 
@@ -86,4 +86,6 @@
         </Viewbox>
 
     </Grid>
+    
+    
 </Window>
