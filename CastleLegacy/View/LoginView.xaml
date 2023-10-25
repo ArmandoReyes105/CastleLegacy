@@ -40,7 +40,7 @@
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="30">
                     <TextBlock Name="LanguageTxt" Text="EN" Style="{StaticResource normalText}" FontFamily="../Fonts/Comfortaa-Bold.ttf#comfortaa"/>
-                    <Image Name="DropMenu" Source="/Images/DownArrowIcon.png" Margin="10 2.5 0 10" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="ShowPopup" MouseEnter="PlayHoverSound"/>
+                    <Image Name="DropMenu" Source="/Resources/Images/DownArrowIcon.png" Margin="10 2.5 0 10" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="ShowPopup" MouseEnter="PlayHoverSound"/>
                     
                     <Popup Name="popup" PlacementTarget="{Binding ElementName=DropMenu}" Width="150" Placement="Bottom" StaysOpen="True" IsOpen="False">
                         <Border Background="#181818" MouseLeave="HidePopup">
