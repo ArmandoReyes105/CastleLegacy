@@ -22,16 +22,16 @@
             <TextBlock TextWrapping="Wrap" Text="Legacy" Style="{StaticResource titleText}" Margin="90,-10,0,0" Foreground="{StaticResource SandColor}"/>
 
             <TextBlock TextWrapping="Wrap" Text="Email" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox  Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <TextBox x:Name="TextBox_Email"  Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
             <TextBlock Text="{x:Static p:Resources.Username}" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox  Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <TextBox x:Name="TextBox_Username" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
             <TextBlock Text="{x:Static p:Resources.Password}" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox  Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <TextBox x:Name="TextBox_Password" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
             <TextBlock Text="{x:Static p:Resources.ConfirmPassword}" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox  Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <TextBox x:Name="TextBox_ConfirmPassword" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
 
         </StackPanel>
@@ -44,7 +44,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="{x:Static p:Resources.CreateAccount}" Style="{StaticResource button}" Height="45" Width="200" MouseEnter="PlayHoverSound"/>
+            <Button Content="{x:Static p:Resources.CreateAccount}" Style="{StaticResource button}" Height="45" Width="200" MouseEnter="PlayHoverSound" VerticalAlignment="Bottom" Click="Button_Click"/>
             <TextBlock Text="{x:Static p:Resources.AlreadyHaveAccount}" Grid.Column="2" Style="{StaticResource underlineText}" VerticalAlignment="Center" MouseLeftButtonDown="OpenLoginView" MouseEnter="PlayHoverSound"/>
         </Grid>
 
