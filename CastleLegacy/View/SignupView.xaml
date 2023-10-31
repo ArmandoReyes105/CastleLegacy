@@ -28,10 +28,10 @@
             <TextBox x:Name="TextBox_Username" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
             <TextBlock Text="{x:Static p:Resources.Password}" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox x:Name="TextBox_Password" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <PasswordBox x:Name="PasswordBox_Password" Width="410" Height="45" Style="{StaticResource underlinePassword}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
             <TextBlock Text="{x:Static p:Resources.ConfirmPassword}" Style="{StaticResource normalText}" Margin="50,30,0,0"/>
-            <TextBox x:Name="TextBox_ConfirmPassword" Width="410" Height="45" Style="{StaticResource underlineTextBox}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+            <PasswordBox x:Name="PasswordBox_ConfirmPassword" Width="410" Height="45" Style="{StaticResource underlinePassword}" HorizontalAlignment="Left" Margin="50,0,0,0"/>
 
 
         </StackPanel>

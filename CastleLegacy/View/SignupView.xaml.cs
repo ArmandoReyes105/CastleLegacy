@@ -60,11 +60,11 @@ namespace CastleLegacy.View
             signupVM = new SignupVM();
 
             if (!string.IsNullOrEmpty(TextBox_Email.Text) && !string.IsNullOrEmpty(TextBox_Username.Text) &&
-                !string.IsNullOrEmpty(TextBox_Password.Text) && !string.IsNullOrEmpty(TextBox_ConfirmPassword.Text))
+                !string.IsNullOrEmpty(PasswordBox_Password.Password) && !string.IsNullOrEmpty(PasswordBox_ConfirmPassword.Password))
             {
-                if (TextBox_Password.Text == TextBox_ConfirmPassword.Text)
+                if (PasswordBox_Password.Password == PasswordBox_ConfirmPassword.Password)
                 {
-                    var account = new Account { Email = TextBox_Email.Text, Username = TextBox_Username.Text, Password = TextBox_Password.Text, AccountStatus = "Online" };
+                    var account = new Account { Email = TextBox_Email.Text, Username = TextBox_Username.Text, Password = PasswordBox_Password.Password, AccountStatus = "Online" };
                     signupVM.addAccount(account);
 
                     OpenMenuView();

@@ -159,6 +159,9 @@
     <Resource Include="Resources\Fonts\Comfortaa-Regular.ttf" />
     <Resource Include="Resources\Fonts\Comfortaa-Bold.ttf" />
     <None Include="Connected Services\ServerServices\AccountService.wsdl" />
+    <None Include="Connected Services\ServerServices\CastleLegacy.ServerServices.Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServerServices\item.xsd">
       <SubType>Designer</SubType>
     </None>

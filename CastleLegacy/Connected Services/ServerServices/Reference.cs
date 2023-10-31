@@ -942,6 +942,12 @@ namespace CastleLegacy.ServerServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/AddAccount", ReplyAction="http://tempuri.org/IAccount/AddAccountResponse")]
         System.Threading.Tasks.Task<int> AddAccountAsync(CastleLegacy.ServerServices.Account account);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccount", ReplyAction="http://tempuri.org/IAccount/GetAccountResponse")]
+        CastleLegacy.ServerServices.Account GetAccount(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccount", ReplyAction="http://tempuri.org/IAccount/GetAccountResponse")]
+        System.Threading.Tasks.Task<CastleLegacy.ServerServices.Account> GetAccountAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -977,6 +983,14 @@ namespace CastleLegacy.ServerServices {
         
         public System.Threading.Tasks.Task<int> AddAccountAsync(CastleLegacy.ServerServices.Account account) {
             return base.Channel.AddAccountAsync(account);
+        }
+        
+        public CastleLegacy.ServerServices.Account GetAccount(string username) {
+            return base.Channel.GetAccount(username);
+        }
+        
+        public System.Threading.Tasks.Task<CastleLegacy.ServerServices.Account> GetAccountAsync(string username) {
+            return base.Channel.GetAccountAsync(username);
         }
     }
 }
