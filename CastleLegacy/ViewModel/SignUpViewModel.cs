@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security;
-using System.ServiceModel.Description;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using CastleLegacy.Helpers;
 using CastleLegacy.Model;
-using CastleLegacy.ServerServices;
 using CastleLegacy.View;
 
 namespace CastleLegacy.ViewModel
@@ -167,22 +161,6 @@ namespace CastleLegacy.ViewModel
         }
 
         //Methods 
-        public void addAccount(Account account)
-        {
-
-            try
-            {
-                AccountClient client = new AccountClient();
-                client.AddAccount(account);
-                client.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al crear la cuenta: {ex.Message}");
-            }
-
-        }
-
         private bool AreFieldsComplete()
         {
             bool result = true;
