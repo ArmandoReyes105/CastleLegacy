@@ -1,110 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Database.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Database.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="Account">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AccountCards" nillable="true" type="tns:ArrayOfAccountCards" />
-      <xs:element minOccurs="0" name="AccountCastles" nillable="true" type="tns:ArrayOfAccountCastles" />
-      <xs:element minOccurs="0" name="AccountFriends" nillable="true" type="tns:ArrayOfAccountFriends" />
-      <xs:element minOccurs="0" name="AccountStatus" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id_Account" type="xs:int" />
-      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:ArrayOfProfile" />
-      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Account" nillable="true" type="tns:Account" />
-  <xs:complexType name="ArrayOfAccountCards">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountCards" nillable="true" type="tns:AccountCards" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAccountCards" nillable="true" type="tns:ArrayOfAccountCards" />
-  <xs:complexType name="AccountCards">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
-      <xs:element minOccurs="0" name="Card" nillable="true" type="tns:Card" />
-      <xs:element minOccurs="0" name="Id_Account" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_AccountCards" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_Card" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AccountCards" nillable="true" type="tns:AccountCards" />
-  <xs:complexType name="Card">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AccountCards" nillable="true" type="tns:ArrayOfAccountCards" />
-      <xs:element minOccurs="0" name="Attack" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Health" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_Card" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Card" nillable="true" type="tns:Card" />
-  <xs:complexType name="ArrayOfAccountCastles">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountCastles" nillable="true" type="tns:AccountCastles" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAccountCastles" nillable="true" type="tns:ArrayOfAccountCastles" />
-  <xs:complexType name="AccountCastles">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
-      <xs:element minOccurs="0" name="Castle" nillable="true" type="tns:Castle" />
-      <xs:element minOccurs="0" name="Id_Account" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_AccountCastles" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_Castle" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AccountCastles" nillable="true" type="tns:AccountCastles" />
-  <xs:complexType name="Castle">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AccountCastles" nillable="true" type="tns:ArrayOfAccountCastles" />
-      <xs:element minOccurs="0" name="Id_Castle" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Castle" nillable="true" type="tns:Castle" />
-  <xs:complexType name="ArrayOfAccountFriends">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountFriends" nillable="true" type="tns:AccountFriends" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAccountFriends" nillable="true" type="tns:ArrayOfAccountFriends" />
-  <xs:complexType name="AccountFriends">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
-      <xs:element minOccurs="0" name="Friend" nillable="true" type="tns:Friend" />
-      <xs:element minOccurs="0" name="Id_Account" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_AccountFriends" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_Friend" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AccountFriends" nillable="true" type="tns:AccountFriends" />
-  <xs:complexType name="Friend">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AccountFriends" nillable="true" type="tns:ArrayOfAccountFriends" />
-      <xs:element minOccurs="0" name="FriendStatus" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id_Friend" type="xs:int" />
-      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Friend" nillable="true" type="tns:Friend" />
-  <xs:complexType name="ArrayOfProfile">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfProfile" nillable="true" type="tns:ArrayOfProfile" />
-  <xs:complexType name="Profile">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
-      <xs:element minOccurs="0" name="FirstLastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id_Account" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_Profile" type="xs:int" />
-      <xs:element minOccurs="0" name="Losses" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Names" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ProfileImage" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="SecondLastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Victories" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Profile" nillable="true" type="tns:Profile" />
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8082/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Database.Model" />
+  <xs:import schemaLocation="http://localhost:8082/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Services.DTO" />
+  <xs:element name="AddAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Database.Model" minOccurs="0" name="account" nillable="true" type="q1:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAccountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByUsername">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByUsernameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Services.DTO" minOccurs="0" name="GetAccountByUsernameResult" nillable="true" type="q2:AccountData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

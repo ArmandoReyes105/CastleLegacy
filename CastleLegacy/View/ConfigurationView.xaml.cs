@@ -21,8 +21,8 @@ namespace CastleLegacy.View
 
             SoundManager.PlayClickSound();
 
-            NavigationService navigationService = NavigationService.GetNavigationService(this);
-            navigationService.GoBack();
+            //NavigationService navigationService = base.NavigationService.GetNavigationService(this);
+            //navigationService.GoBack();
 
         }
 

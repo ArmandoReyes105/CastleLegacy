@@ -187,6 +187,15 @@ namespace CastleLegacy.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a The username or password is incorrect.
+        /// </summary>
+        public static string IncorrectAccount {
+            get {
+                return ResourceManager.GetString("IncorrectAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Language.
         /// </summary>
         public static string Language {
@@ -237,6 +246,16 @@ namespace CastleLegacy.Properties {
         public static string Quit {
             get {
                 return ResourceManager.GetString("Quit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sorry, couldn&apos;t connect to the server. 
+        ///Check your internet connection or try again later.
+        /// </summary>
+        public static string ServerError {
+            get {
+                return ResourceManager.GetString("ServerError", resourceCulture);
             }
         }
         

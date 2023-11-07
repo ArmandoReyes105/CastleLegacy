@@ -933,6 +933,115 @@ namespace CastleLegacy.ServerServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AccountData", Namespace="http://schemas.datacontract.org/2004/07/Services.DTO")]
+    [System.SerializableAttribute()]
+    public partial class AccountData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AccountStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Id_AccountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AccountStatus {
+            get {
+                return this.AccountStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccountStatusField, value) != true)) {
+                    this.AccountStatusField = value;
+                    this.RaisePropertyChanged("AccountStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id_Account {
+            get {
+                return this.Id_AccountField;
+            }
+            set {
+                if ((this.Id_AccountField.Equals(value) != true)) {
+                    this.Id_AccountField = value;
+                    this.RaisePropertyChanged("Id_Account");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServerServices.IAccount")]
     public interface IAccount {
@@ -943,11 +1052,11 @@ namespace CastleLegacy.ServerServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/AddAccount", ReplyAction="http://tempuri.org/IAccount/AddAccountResponse")]
         System.Threading.Tasks.Task<int> AddAccountAsync(CastleLegacy.ServerServices.Account account);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccount", ReplyAction="http://tempuri.org/IAccount/GetAccountResponse")]
-        CastleLegacy.ServerServices.Account GetAccount(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccountByUsername", ReplyAction="http://tempuri.org/IAccount/GetAccountByUsernameResponse")]
+        CastleLegacy.ServerServices.AccountData GetAccountByUsername(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccount", ReplyAction="http://tempuri.org/IAccount/GetAccountResponse")]
-        System.Threading.Tasks.Task<CastleLegacy.ServerServices.Account> GetAccountAsync(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccountByUsername", ReplyAction="http://tempuri.org/IAccount/GetAccountByUsernameResponse")]
+        System.Threading.Tasks.Task<CastleLegacy.ServerServices.AccountData> GetAccountByUsernameAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -985,12 +1094,12 @@ namespace CastleLegacy.ServerServices {
             return base.Channel.AddAccountAsync(account);
         }
         
-        public CastleLegacy.ServerServices.Account GetAccount(string username) {
-            return base.Channel.GetAccount(username);
+        public CastleLegacy.ServerServices.AccountData GetAccountByUsername(string username) {
+            return base.Channel.GetAccountByUsername(username);
         }
         
-        public System.Threading.Tasks.Task<CastleLegacy.ServerServices.Account> GetAccountAsync(string username) {
-            return base.Channel.GetAccountAsync(username);
+        public System.Threading.Tasks.Task<CastleLegacy.ServerServices.AccountData> GetAccountByUsernameAsync(string username) {
+            return base.Channel.GetAccountByUsernameAsync(username);
         }
     }
 }

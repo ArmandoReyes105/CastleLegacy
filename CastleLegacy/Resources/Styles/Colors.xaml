@@ -4,5 +4,6 @@
     <SolidColorBrush x:Key="SandColor" Color="#FAC56C" />
     <SolidColorBrush x:Key="DarkSandColor" Color="#FFBB49"/>
     <SolidColorBrush x:Key="BackgroundGrey" Color="#181818"/>
+    <SolidColorBrush x:Key="RedColor" Color="#C23737"/>
 
 </ResourceDictionary>

@@ -62,13 +62,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\NavigationManager.cs" />
     <Compile Include="Helpers\SoundManager.cs" />
+    <Compile Include="Model\AccountRepository.cs" />
     <Compile Include="Properties\Resources.es.Designer.cs">
       <DependentUpon>Resources.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ViewModel\SignupVM.cs" />
+    <Compile Include="Resources\Styles\BindablePasswordBox.xaml.cs">
+      <DependentUpon>BindablePasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\ConfigurationView.xaml.cs">
       <DependentUpon>ConfigurationView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\Styles\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,7 +171,7 @@
     <Resource Include="Resources\Fonts\Comfortaa-Regular.ttf" />
     <Resource Include="Resources\Fonts\Comfortaa-Bold.ttf" />
     <None Include="Connected Services\ServerServices\AccountService.wsdl" />
-    <None Include="Connected Services\ServerServices\CastleLegacy.ServerServices.Account.datasource">
+    <None Include="Connected Services\ServerServices\CastleLegacy.ServerServices.AccountData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServerServices\item.xsd">
@@ -171,6 +183,9 @@
     <None Include="Connected Services\ServerServices\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServerServices\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,9 +194,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Images\Castle1.png" />
   </ItemGroup>

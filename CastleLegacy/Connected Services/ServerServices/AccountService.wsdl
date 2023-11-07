@@ -17,6 +17,7 @@
       <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Database.Model" />
+      <xsd:import schemaLocation="http://localhost:8082/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Services.DTO" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAccount_AddAccount_InputMessage">
@@ -25,20 +26,20 @@
   <wsdl:message name="IAccount_AddAccount_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddAccountResponse" />
   </wsdl:message>
-  <wsdl:message name="IAccount_GetAccount_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAccount" />
+  <wsdl:message name="IAccount_GetAccountByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByUsername" />
   </wsdl:message>
-  <wsdl:message name="IAccount_GetAccount_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAccountResponse" />
+  <wsdl:message name="IAccount_GetAccountByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByUsernameResponse" />
   </wsdl:message>
   <wsdl:portType name="IAccount">
     <wsdl:operation name="AddAccount">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccount/AddAccount" message="tns:IAccount_AddAccount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAccount/AddAccountResponse" message="tns:IAccount_AddAccount_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetAccount">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAccount/GetAccount" message="tns:IAccount_GetAccount_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAccount/GetAccountResponse" message="tns:IAccount_GetAccount_OutputMessage" />
+    <wsdl:operation name="GetAccountByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccount/GetAccountByUsername" message="tns:IAccount_GetAccountByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccount/GetAccountByUsernameResponse" message="tns:IAccount_GetAccountByUsername_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IAccount" type="tns:IAccount">
@@ -53,8 +54,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAccount">
-      <soap12:operation soapAction="http://tempuri.org/IAccount/GetAccount" style="document" />
+    <wsdl:operation name="GetAccountByUsername">
+      <soap12:operation soapAction="http://tempuri.org/IAccount/GetAccountByUsername" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

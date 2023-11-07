@@ -1,4 +1,5 @@
-﻿using CastleLegacy.View;
+﻿using CastleLegacy.Helpers;
+using CastleLegacy.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,10 @@ namespace CastleLegacy
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.NavigationService.Navigate(new MenuView());
+
+            NavigationManager.Instance.Initialize(MainFrame);
+            NavigationManager.Instance.NavigateTo(new LoginView()); 
+
         }
     }
 }

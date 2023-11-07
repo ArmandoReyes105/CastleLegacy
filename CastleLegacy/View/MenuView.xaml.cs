@@ -1,20 +1,10 @@
 ﻿using CastleLegacy.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace CastleLegacy.View
 {
@@ -51,10 +41,7 @@ namespace CastleLegacy.View
         private void QuitGame(object sender, RoutedEventArgs e)
         {
             SoundManager.PlayClickSound();
-
-            LoginView login = new LoginView();
-            Window.GetWindow(this).Close();
-            login.Show();
+            NavigationManager.Instance.NavigateTo(new LoginView()); 
 
         }
 
@@ -62,8 +49,8 @@ namespace CastleLegacy.View
         {
             SoundManager.PlayClickSound();
 
-            NavigationService navegationService = NavigationService.GetNavigationService(this);
-            navegationService.Navigate(new ConfigurationView());
+            //NavigationService navegationService = base.NavigationService.GetNavigationService(this);
+            //navegationService.Navigate(new ConfigurationView());
         }
 
     }

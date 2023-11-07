@@ -159,6 +159,9 @@
   <data name="ImageProfile" xml:space="preserve">
     <value>Image profile</value>
   </data>
+  <data name="IncorrectAccount" xml:space="preserve">
+    <value>The username or password is incorrect</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
@@ -176,6 +179,10 @@
   </data>
   <data name="Quit" xml:space="preserve">
     <value>Quit</value>
+  </data>
+  <data name="ServerError" xml:space="preserve">
+    <value>Sorry, couldn't connect to the server. 
+Check your internet connection or try again later</value>
   </data>
   <data name="Spanish" xml:space="preserve">
     <value>Spanish</value>
