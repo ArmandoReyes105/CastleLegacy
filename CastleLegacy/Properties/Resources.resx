@@ -135,11 +135,17 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Change password</value>
   </data>
+  <data name="ChangePasswordVerificationCodeMessage" xml:space="preserve">
+    <value>Kindly furnish your username and email address. This will enable us to dispatch a verification code to your email for authentication purposes.</value>
+  </data>
   <data name="ChangeUsername" xml:space="preserve">
     <value>Change username</value>
   </data>
   <data name="Configuration" xml:space="preserve">
     <value>Configuration</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirm your password</value>

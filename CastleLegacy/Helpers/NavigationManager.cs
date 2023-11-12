@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace CastleLegacy.Helpers
 {
@@ -7,6 +8,7 @@ namespace CastleLegacy.Helpers
 
         private static NavigationManager _instance;
         private Frame _mainFrame;
+        private Window _currentWindow;
 
         private NavigationManager() { }
 
@@ -34,7 +36,28 @@ namespace CastleLegacy.Helpers
                 _mainFrame.Navigate(page);
             }
         }
-        
+
+        public void ShowWindow(Window window)
+        {
+            _currentWindow = window;
+            _currentWindow.Show();
+        }
+
+        public void ShowModalWindow(Window window)
+        {
+            if (_currentWindow != null)
+            {
+                _currentWindow.IsEnabled = false; 
+                window.Owner = _currentWindow; 
+                window.ShowDialog(); 
+                _currentWindow.IsEnabled = true; 
+            }
+            else
+            {
+                window.ShowDialog(); 
+            }
+        }
+
 
         public void GoBack()
         {

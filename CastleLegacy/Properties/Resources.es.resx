@@ -135,11 +135,17 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Cambiar contraseña</value>
   </data>
+  <data name="ChangePasswordVerificationCodeMessage" xml:space="preserve">
+    <value>Por favor proporcione su nombre de usuario y dirección de correo electrónico. Esto nos permitirá enviar un código de verificación a su correo electrónico con fines de autenticación.</value>
+  </data>
   <data name="ChangeUsername" xml:space="preserve">
     <value>Cambiar nombre de usuario</value>
   </data>
   <data name="Configuration" xml:space="preserve">
     <value>Configuración</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirma tu contraseña</value>

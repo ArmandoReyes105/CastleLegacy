@@ -61,8 +61,10 @@ namespace CastleLegacy.ViewModel
         //Commands
         public ICommand LoginCommand { get; } 
         public ICommand CreateAccountCommand { get; }
+        public ICommand ChangePasswordCommand { get; }
         public ICommand SetSpanishCommand { get; }
         public ICommand SetEnglishCommand { get; }
+        
 
 
         //Constructor
@@ -70,6 +72,7 @@ namespace CastleLegacy.ViewModel
         {
             LoginCommand = new RelayCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             CreateAccountCommand = new RelayCommand(ExecuteCreateAccountCommand);
+            ChangePasswordCommand = new RelayCommand(ExecuteChangePasswordCommand);
             SetSpanishCommand = new RelayCommand(ExecuteSetSpanishCommand);
             SetEnglishCommand = new RelayCommand(ExecuteSetEnglishCommand); 
 
@@ -118,6 +121,12 @@ namespace CastleLegacy.ViewModel
         {
             NavigationManager.Instance.NavigateTo(new SignupView());
             SoundManager.PlayClickSound(); 
+        }
+
+        private void ExecuteChangePasswordCommand(object obj)
+        {
+            NavigationManager.Instance.ShowModalWindow(new ChangePasswordView());
+            SoundManager.PlayClickSound();
         }
 
         private void ExecuteSetSpanishCommand(object obj)

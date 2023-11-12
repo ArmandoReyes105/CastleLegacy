@@ -80,6 +80,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Content="{x:Static p:Resources.ForgotPassword}" 
+                        Command="{Binding ChangePasswordCommand}"
                         Margin="20"
                         Style="{StaticResource TextButton}"
                         MouseEnter="PlayHoverSound"/>

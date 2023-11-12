@@ -22,4 +22,10 @@
         <Setter Property="Foreground" Value="White"/>
     </Style>
 
+    <Style x:Key="longText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ComfortaaNormal}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
 </ResourceDictionary>

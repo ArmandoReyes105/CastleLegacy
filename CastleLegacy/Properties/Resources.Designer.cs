@@ -115,6 +115,15 @@ namespace CastleLegacy.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Kindly furnish your username and email address. This will enable us to dispatch a verification code to your email for authentication purposes..
+        /// </summary>
+        public static string ChangePasswordVerificationCodeMessage {
+            get {
+                return ResourceManager.GetString("ChangePasswordVerificationCodeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Change username.
         /// </summary>
         public static string ChangeUsername {
@@ -129,6 +138,15 @@ namespace CastleLegacy.Properties {
         public static string Configuration {
             get {
                 return ResourceManager.GetString("Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirm.
+        /// </summary>
+        public static string Confirm {
+            get {
+                return ResourceManager.GetString("Confirm", resourceCulture);
             }
         }
         
