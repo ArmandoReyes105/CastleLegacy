@@ -1057,6 +1057,18 @@ namespace CastleLegacy.ServerServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetAccountByUsername", ReplyAction="http://tempuri.org/IAccount/GetAccountByUsernameResponse")]
         System.Threading.Tasks.Task<CastleLegacy.ServerServices.AccountData> GetAccountByUsernameAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetVerificationCode", ReplyAction="http://tempuri.org/IAccount/GetVerificationCodeResponse")]
+        int GetVerificationCode(string username, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/GetVerificationCode", ReplyAction="http://tempuri.org/IAccount/GetVerificationCodeResponse")]
+        System.Threading.Tasks.Task<int> GetVerificationCodeAsync(string username, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/ChangePassword", ReplyAction="http://tempuri.org/IAccount/ChangePasswordResponse")]
+        int ChangePassword(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccount/ChangePassword", ReplyAction="http://tempuri.org/IAccount/ChangePasswordResponse")]
+        System.Threading.Tasks.Task<int> ChangePasswordAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1100,6 +1112,22 @@ namespace CastleLegacy.ServerServices {
         
         public System.Threading.Tasks.Task<CastleLegacy.ServerServices.AccountData> GetAccountByUsernameAsync(string username) {
             return base.Channel.GetAccountByUsernameAsync(username);
+        }
+        
+        public int GetVerificationCode(string username, string email) {
+            return base.Channel.GetVerificationCode(username, email);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetVerificationCodeAsync(string username, string email) {
+            return base.Channel.GetVerificationCodeAsync(username, email);
+        }
+        
+        public int ChangePassword(string username, string password) {
+            return base.Channel.ChangePassword(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<int> ChangePasswordAsync(string username, string password) {
+            return base.Channel.ChangePasswordAsync(username, password);
         }
     }
 }

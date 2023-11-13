@@ -135,6 +135,12 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Cambiar contraseña</value>
   </data>
+  <data name="ChangePasswordNewPasswordMessage" xml:space="preserve">
+    <value>Cree una nueva contraseña; debe constar de al menos seis caracteres.</value>
+  </data>
+  <data name="ChangePasswordSentVerificationCodeMessage" xml:space="preserve">
+    <value>El código de verificación se ha enviado al correo electrónico proporcionado. Por favor revise su bandeja de entrada e ingrese el código para continuar.</value>
+  </data>
   <data name="ChangePasswordVerificationCodeMessage" xml:space="preserve">
     <value>Por favor proporcione su nombre de usuario y dirección de correo electrónico. Esto nos permitirá enviar un código de verificación a su correo electrónico con fines de autenticación.</value>
   </data>
@@ -174,11 +180,20 @@
   <data name="LogIn" xml:space="preserve">
     <value>Iniciar sesion</value>
   </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
   <data name="NotRegisterYet" xml:space="preserve">
     <value>¿No estas registrado aún? Registrate</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Contraseña cambiada</value>
+  </data>
+  <data name="PasswordChangedMessage" xml:space="preserve">
+    <value>Su contraseña se ha modificado con éxito. Por favor, presione "Confirmar" para regresar a la página de inicio de sesión.</value>
   </data>
   <data name="Play" xml:space="preserve">
     <value>Jugar</value>
@@ -195,5 +210,8 @@ Revise su conexión a internet o intentelo más tarde. </value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Nombre de usuario</value>
+  </data>
+  <data name="VerificationCode" xml:space="preserve">
+    <value>Código de verificación</value>
   </data>
 </root>

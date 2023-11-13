@@ -5,6 +5,8 @@ using System;
 using System.Globalization;
 using System.Security;
 using System.Windows.Input;
+using System.Windows.Controls;
+using System.Windows;
 
 namespace CastleLegacy.ViewModel
 {
@@ -149,5 +151,6 @@ namespace CastleLegacy.ViewModel
             CultureInfo currentUICulture = CultureInfo.CurrentUICulture;
             Language = currentUICulture.Name.ToUpper();
         }
+
     }
 }

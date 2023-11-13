@@ -115,6 +115,24 @@ namespace CastleLegacy.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Please create a new password; it should consist of at least six characters..
+        /// </summary>
+        public static string ChangePasswordNewPasswordMessage {
+            get {
+                return ResourceManager.GetString("ChangePasswordNewPasswordMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Verification code has been sent to the provided email. Please check your inbox and enter the code to proceed..
+        /// </summary>
+        public static string ChangePasswordSentVerificationCodeMessage {
+            get {
+                return ResourceManager.GetString("ChangePasswordSentVerificationCodeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Kindly furnish your username and email address. This will enable us to dispatch a verification code to your email for authentication purposes..
         /// </summary>
         public static string ChangePasswordVerificationCodeMessage {
@@ -232,6 +250,15 @@ namespace CastleLegacy.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a New password.
+        /// </summary>
+        public static string NewPassword {
+            get {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Not register yet? Sign Up.
         /// </summary>
         public static string NotRegisterYet {
@@ -246,6 +273,24 @@ namespace CastleLegacy.Properties {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Password changed.
+        /// </summary>
+        public static string PasswordChanged {
+            get {
+                return ResourceManager.GetString("PasswordChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Your password has been successfully changed. Please press &quot;Confirm&quot; to return to the login page..
+        /// </summary>
+        public static string PasswordChangedMessage {
+            get {
+                return ResourceManager.GetString("PasswordChangedMessage", resourceCulture);
             }
         }
         
@@ -292,6 +337,15 @@ namespace CastleLegacy.Properties {
         public static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Verification code.
+        /// </summary>
+        public static string VerificationCode {
+            get {
+                return ResourceManager.GetString("VerificationCode", resourceCulture);
             }
         }
     }

@@ -32,6 +32,18 @@
   <wsdl:message name="IAccount_GetAccountByUsername_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAccountByUsernameResponse" />
   </wsdl:message>
+  <wsdl:message name="IAccount_GetVerificationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerificationCode" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetVerificationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerificationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAccount">
     <wsdl:operation name="AddAccount">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccount/AddAccount" message="tns:IAccount_AddAccount_InputMessage" />
@@ -40,6 +52,14 @@
     <wsdl:operation name="GetAccountByUsername">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccount/GetAccountByUsername" message="tns:IAccount_GetAccountByUsername_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAccount/GetAccountByUsernameResponse" message="tns:IAccount_GetAccountByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerificationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccount/GetVerificationCode" message="tns:IAccount_GetVerificationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccount/GetVerificationCodeResponse" message="tns:IAccount_GetVerificationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccount/ChangePassword" message="tns:IAccount_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccount/ChangePasswordResponse" message="tns:IAccount_ChangePassword_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IAccount" type="tns:IAccount">
@@ -56,6 +76,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAccountByUsername">
       <soap12:operation soapAction="http://tempuri.org/IAccount/GetAccountByUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerificationCode">
+      <soap12:operation soapAction="http://tempuri.org/IAccount/GetVerificationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/IAccount/ChangePassword" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

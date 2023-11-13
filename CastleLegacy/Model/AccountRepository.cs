@@ -9,7 +9,7 @@ namespace CastleLegacy.Model
 {
     public static class AccountRepository
     {
-        
+
         public static AccountData AuthenticateAccount(string username, SecureString password)
         {
             AccountClient client = new AccountClient();
@@ -18,11 +18,11 @@ namespace CastleLegacy.Model
 
             AccountData result;
 
-            if(account != null)
+            if (account != null)
             {
-                if(account.Password == ConvertSecureStringToString(password))
+                if (account.Password == ConvertSecureStringToString(password))
                 {
-                   result = account;
+                    result = account;
                 }
                 else
                 {
@@ -46,15 +46,15 @@ namespace CastleLegacy.Model
             account.Email = email;
             account.Username = username;
             account.Password = accountPassword;
-            account.AccountStatus = "Online"; 
+            account.AccountStatus = "Online";
 
-             
+
             AccountClient client = new AccountClient();
-            operationResult = client.AddAccount(account); 
-            client.Close(); 
+            operationResult = client.AddAccount(account);
+            client.Close();
 
-            return operationResult; 
-        } 
+            return operationResult;
+        }
 
         private static string ConvertSecureStringToString(SecureString secureString)
         {
@@ -79,8 +79,42 @@ namespace CastleLegacy.Model
 
             result = accountPassword == passwordConfirmation;
 
-            return result; 
+            return result;
 
+        }
+
+        public static int GetVerificationCode(string username, string email)
+        {
+            int result = 0;
+
+            AccountClient client = new AccountClient();
+            result = client.GetVerificationCode(username, email);
+            client.Close();
+
+            return result;
+        }
+
+        public static bool ValidateVerificationCode(string verificationCodeProvided, int verificationCodeGenerated)
+        {
+            bool result = false;
+
+            if (int.Parse(verificationCodeProvided) == verificationCodeGenerated)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public static int ChangePassword(string username, SecureString password)
+        {
+            int result = 0;
+
+            AccountClient client = new AccountClient();
+            result = client.ChangePassword(username, ConvertSecureStringToString(password));
+            client.Close();
+
+            return result;
         }
 
     }
