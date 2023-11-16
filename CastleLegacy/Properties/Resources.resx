@@ -211,6 +211,9 @@ Check your internet connection or try again later</value>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="UsernameOrEmailNotExistMessage" xml:space="preserve">
+    <value>The entered user or email does not exist. Please verify that you have entered the values correctly.</value>
+  </data>
   <data name="VerificationCode" xml:space="preserve">
     <value>Verification code</value>
   </data>

@@ -26,6 +26,7 @@ namespace CastleLegacy.ViewModel
         private Visibility _insertVerificationCode;
         private Visibility _insertNewPassword;
         private Visibility _passwordChanged;
+        private Visibility _errorMessage;
 
         //Variables
         private int verificationCodeGenerated;
@@ -121,6 +122,16 @@ namespace CastleLegacy.ViewModel
             }
         }
 
+        public Visibility ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                OnPropertyChanged(nameof(ErrorMessage));
+            }
+        }
+
         //Commands
         public ICommand GetVerificationCodeCommand {  get; }
         public ICommand ValidateVerificationCodeCommand { get; }
@@ -132,7 +143,8 @@ namespace CastleLegacy.ViewModel
         {
             InsertVerificationCode = Visibility.Collapsed;
             InsertNewPassword = Visibility.Collapsed;
-            PasswordChanged = Visibility.Collapsed; 
+            PasswordChanged = Visibility.Collapsed;
+            ErrorMessage = Visibility.Collapsed;
 
             GetVerificationCodeCommand = new RelayCommand(ExecuteGetVerificationCodeCommand);
             ValidateVerificationCodeCommand = new RelayCommand(ExecuteValidateVerificationCodeCommand);
@@ -145,13 +157,20 @@ namespace CastleLegacy.ViewModel
         {
             try
             {
-                InsertUsernameAndEmail = Visibility.Collapsed;
-                InsertVerificationCode = Visibility.Visible;
                 verificationCodeGenerated = AccountRepository.GetVerificationCode(Username, Email);
             } 
             catch (Exception ex) 
             {
                 Console.WriteLine("El error fue: " + ex.Message);
+            }
+
+            if (verificationCodeGenerated >= 100000 &&  verificationCodeGenerated <= 999999)
+            {
+                InsertUsernameAndEmail = Visibility.Collapsed;
+                InsertVerificationCode = Visibility.Visible;
+            } else
+            {
+                ErrorMessage = Visibility.Visible;
             }
 
         }
@@ -164,7 +183,7 @@ namespace CastleLegacy.ViewModel
             {
                 InsertVerificationCode = Visibility.Hidden;
                 InsertNewPassword = Visibility.Visible;
-            }
+            } 
 
         }
 

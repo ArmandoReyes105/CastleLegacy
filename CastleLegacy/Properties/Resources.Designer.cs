@@ -341,6 +341,15 @@ namespace CastleLegacy.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a The entered user or email does not exist. Please verify that you have entered the values correctly..
+        /// </summary>
+        public static string UsernameOrEmailNotExistMessage {
+            get {
+                return ResourceManager.GetString("UsernameOrEmailNotExistMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Verification code.
         /// </summary>
         public static string VerificationCode {

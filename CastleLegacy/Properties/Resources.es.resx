@@ -211,6 +211,9 @@ Revise su conexión a internet o intentelo más tarde. </value>
   <data name="Username" xml:space="preserve">
     <value>Nombre de usuario</value>
   </data>
+  <data name="UsernameOrEmailNotExistMessage" xml:space="preserve">
+    <value>La cuenta de usuario o la dirección de correo electrónico proporcionada no existe. Por favor, asegúrese de haber ingresado la información correctamente.</value>
+  </data>
   <data name="VerificationCode" xml:space="preserve">
     <value>Código de verificación</value>
   </data>
