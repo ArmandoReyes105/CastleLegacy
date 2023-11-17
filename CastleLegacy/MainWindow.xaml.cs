@@ -1,5 +1,6 @@
 ﻿using CastleLegacy.Helpers;
 using CastleLegacy.View;
+using log4net.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace CastleLegacy
         public MainWindow()
         {
             InitializeComponent();
+            XmlConfigurator.Configure();
 
             NavigationManager.Instance.Initialize(MainFrame);
             NavigationManager.Instance.NavigateTo(new LoginView()); 

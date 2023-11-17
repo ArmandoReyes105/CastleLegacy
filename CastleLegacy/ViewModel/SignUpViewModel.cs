@@ -5,11 +5,13 @@ using System.Windows.Input;
 using CastleLegacy.Helpers;
 using CastleLegacy.Model;
 using CastleLegacy.View;
+using log4net;
 
 namespace CastleLegacy.ViewModel
 {
     public class SignUpViewModel : ViewModelBase
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(SignUpViewModel));
 
         //Fields
         private string _username;
@@ -148,8 +150,8 @@ namespace CastleLegacy.ViewModel
                 }
             }catch (Exception ex)
             {
-                GeneralErrorMessage = Properties.Resources.ServerError; 
-                Console.WriteLine(ex.Message);
+                GeneralErrorMessage = Properties.Resources.ServerError;
+                log.Error("Ha ocurrido un error: ", ex);
             }
             
         }

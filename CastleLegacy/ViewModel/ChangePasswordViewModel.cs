@@ -8,11 +8,13 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Input;
 using System.Security;
+using log4net;
 
 namespace CastleLegacy.ViewModel
 {
     public class ChangePasswordViewModel : ViewModelBase
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(ChangePasswordViewModel));
 
         //Fields
         private string _username;
@@ -161,7 +163,7 @@ namespace CastleLegacy.ViewModel
             } 
             catch (Exception ex) 
             {
-                Console.WriteLine("El error fue: " + ex.Message);
+                log.Error("Ha ocurrido un error: ", ex);
             }
 
             if (verificationCodeGenerated >= 100000 &&  verificationCodeGenerated <= 999999)
@@ -203,7 +205,7 @@ namespace CastleLegacy.ViewModel
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("El error fue: " + ex.Message);
+                    log.Error("Ha ocurrido un error: ", ex);
                 }
             }
             
