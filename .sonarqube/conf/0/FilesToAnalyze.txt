@@ -1,0 +1,35 @@
+﻿C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Helpers\NavigationManager.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Helpers\PasswordManager.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Helpers\SoundManager.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Model\AccountRepository.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Resources\Styles\BindablePasswordBox.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\ViewModel\ChangePasswordViewModel.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\ViewModel\LoginViewModel.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\ViewModel\RelayCommand.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\ViewModel\SignUpViewModel.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\ViewModel\ViewModelBase.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\View\ChangePasswordView.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\View\ConfigurationView.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\View\LoginView.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\View\MenuView.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\View\SignupView.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\App.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\MainWindow.xaml.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Properties\AssemblyInfo.cs
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Resources\Audio\ButtonClick.wav
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Resources\Audio\ButtonHover.wav
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Properties\Resources.es.resx
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Properties\Resources.resx
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\AccountService.wsdl
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\CastleLegacy.ServerServices.AccountData.datasource
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\item.xsd
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\item1.xsd
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\item2.xsd
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\item3.xsd
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\packages.config
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Properties\Settings.settings
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\App.config
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\item.disco
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\configuration91.svcinfo
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\configuration.svcinfo
+C:\Users\aguil\Documents\CastleLegacy\CastleLegacy\CastleLegacy\Connected Services\ServerServices\Reference.svcmap

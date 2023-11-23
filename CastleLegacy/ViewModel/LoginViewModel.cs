@@ -7,11 +7,13 @@ using System.Security;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows;
+using log4net;
 
 namespace CastleLegacy.ViewModel
 {
     public class LoginViewModel : ViewModelBase
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(LoginViewModel));
 
         //Fields
         private string _username;
@@ -101,7 +103,7 @@ namespace CastleLegacy.ViewModel
             }
             catch(Exception ex)
             {
-                Console.WriteLine("El error fue: " + ex.Message);
+                log.Error("Ha ocurrido un error: ", ex);
                 ErrorMessage = Properties.Resources.ServerError; 
             }
              
