@@ -29,6 +29,7 @@ namespace CastleLegacy
             XmlConfigurator.Configure();
 
             NavigationManager.Instance.Initialize(MainFrame);
+            //NavigationManager.Instance.NavigateTo(new ConfigurationView());
             NavigationManager.Instance.NavigateTo(new LoginView()); 
 
         }
